@@ -1,0 +1,86 @@
+:root {
+  --strong-color: #F54932;
+  --hoverbtn: #FBCE51;
+  --acolor: #3057A2;
+}
+
+*,
+ul,
+li,
+button,
+p {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  transition: all 600ms;
+  font-family: Merriweather;
+  border: unset;
+  text-decoration: none;
+  line-height: 1.3;
+  scroll-behavior: smooth;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  text-transform: uppercase;
+  font-weight: 400;
+
+  strong {
+    color: var(--strong-color);
+    font-style: bold;
+
+    @media (max-width:480px) {
+      br {
+        display: none;
+      }
+    }
+  }
+}
+
+h2 {
+  font-size: clamp(28px, 1.5vw, 36px);
+
+}
+
+h2.bigh2 {
+  font-size: 54px;
+  line-height: 1.2;
+
+  @media (max-width:480px) {
+    font-size: 36px;
+
+  }
+}
+
+a {
+  font-size: 20px;
+  line-height: 1.2;
+  color: var(--acolor);
+}
+
+a,
+table span {
+  font-family: Golos Text;
+}
+
+.container {
+  padding: 0 350px;
+  overflow: hidden;
+
+  @media (max-width:1400px) {
+    padding: 0 72px;
+  }
+
+  @media (max-width:480px) {
+    padding: 0 20px;
+  }
+}
+
+@import 'header';
+@import 'lectures';
+@import 'session';
+@import 'stage';
+@import 'participants';
+@import 'footer';

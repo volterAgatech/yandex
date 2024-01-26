@@ -1,0 +1,26 @@
+.lectures{
+  padding-top: clamp(110px,4.5vw,160px);
+  &__main{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    @media (max-width:480px) {
+      justify-content: center;
+      .lectures__img{
+        padding: 24px 0;
+      }
+      img{
+        max-width: 100%;
+      }
+      .tohide{
+        display: none;
+      }
+      .toshow{
+        display: block;
+      }
+    }
+  }
+}.toshow{
+  display: none;
+}

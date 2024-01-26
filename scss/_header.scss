@@ -1,0 +1,141 @@
+.header {
+  position: relative;
+  //background-image: url(/img/bgtexture.png);
+
+  &__bg {
+    opacity: 0.85;
+    background-image: url(/img/headerbg.png);
+    height: 700px;
+    background-blend-mode: multiply;
+    background-color: #fbe6d7;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    @media (max-width:480px){
+      background-image: url(/img/mobil.png);
+      background-position: unset;
+      height: 750px;
+    }
+  }
+
+  &__upper {
+    padding-top: clamp(18px,1.5vw,26px);
+  }
+
+  &__middle {
+    padding-top: clamp(40px,2.5vw,62px);
+    max-width: 542px;
+  }
+
+  &__maintext {
+    .maintext {
+      &__elem {
+        display: flex;
+
+        span {
+          font-size: 60px;
+          line-height: 1.1;
+          text-transform: uppercase;
+          letter-spacing: 0px;
+          @media (max-width:480px){
+            font-size: 36px;
+          }
+        }
+
+        &:nth-child(2) {
+          justify-content: center;
+        }
+
+        &:nth-child(3) {
+          justify-content: right;
+        }
+      }
+    }
+  }
+  &__auxiliarytext{
+    padding-top: 24px;
+    text-align: center;
+    @media (max-width:480px){
+      text-align: start;
+    }
+    span{
+      font-size: 18px;
+      font-family: Golos Text;
+      
+    }
+  }
+  &__nav{
+    font-family: Montserrat;
+    padding-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 16px;
+    @media (max-width:480px){
+      grid-template-columns: 1fr;
+      padding-top: 32px;
+    }
+    button{
+      font-family: Golos Text;
+    }
+    
+  }
+  &__marquee {
+    background-color: var(--strong-color);
+    padding: 18px 0;
+    position: absolute;
+    bottom: -60px;
+    @media(max-width:480px){
+      bottom: -65px;
+    }
+    ul {
+      display: flex;
+
+      li {
+        display: flex;
+        align-items: center;
+
+        h3 {
+          font-size: 22px;
+          color: white;
+        }
+
+        svg {
+          margin: 0 9px;
+        }
+      }
+    }
+  }
+}
+.mainbtn{
+  border-radius: 66px;
+  text-align: center;
+  font-size: 16px;
+  padding: 20px 50px;
+  cursor: pointer;
+  font-weight: 600;
+  @media (max-width:480px){
+    padding: 12px 35px;
+  }
+}
+.mainbtn.dark{
+  background-color: black;
+  color: white;
+  border: 1px solid black;
+  &:hover{
+    background-color: var(--hoverbtn);
+    color: black;
+    border: 1px solid var(--hoverbtn);
+  }
+}
+.mainbtn.light{
+  background-color: transparent;
+  color: black;
+  border: 1px solid black;
+  @media(max-width:480px){
+    background-color: white;
+    border: 1px solid white;
+  }
+  &:hover{
+    background-color: black;
+    color: white;
+  }
+}

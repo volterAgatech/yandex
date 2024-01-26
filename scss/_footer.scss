@@ -1,0 +1,35 @@
+.footer{
+  display: grid;
+  padding-top: 120px;
+  &__marquee {
+    background-color: var(--strong-color);
+    padding: 18px 0;
+    ul {
+      display: flex;
+
+      li {
+        display: flex;
+        align-items: center;
+
+        h3 {
+          font-size: 22px;
+          color: white;
+        }
+
+        svg {
+          margin: 0 9px;
+        }
+      }
+    }
+  }
+  &__bottom{
+    background-color: #E9DED4;
+    padding: 40px 0 72px;
+    span{
+      font-weight: 400;
+      font-family: Golos Text;
+      font-size: 16px;
+      opacity: 0.6;
+    }
+  }
+}
